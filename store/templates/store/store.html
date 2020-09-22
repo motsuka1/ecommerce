@@ -6,13 +6,13 @@
     <!-- class = “col-{prefix}-{columns}” {columns}は合計が12に -->
     <!-- https://qiita.com/akatsuki174/items/53b7367b04ed0b066bbf -->
     <div class="col-lg-4">
-      <img class="thumbnail" src="{% static 'images/placeholder.png' %}">
+      <img class="thumbnail" src="{{product.imageURL}}">
       <div class="box-element product">
         <h6><strong>{{product.name}}</strong></h6>
         <hr>
         <button type="button" class="btn btn-outline-secondary add-btn">Add to Cart</button>
         <a class="btn btn-outline-success" href="#">View</a>
-        <h4 style="display: inline=block;float: right">${{product.price|floatformat:2}}</h4> 
+        <h4 style="display: inline=block;float: right">${{product.price|floatformat:2}}</h4>
       </div>
     </div>
     {% endfor %}
