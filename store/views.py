@@ -29,6 +29,7 @@ def cart(request):
         cartItems = order.get_cart_items
     else:
         try:
+            # reverse JSON to python 
             cart = json.loads(request.COOKIES['cart'])
         except:
             cart = {}
